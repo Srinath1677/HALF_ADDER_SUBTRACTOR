@@ -56,37 +56,29 @@ Developed by:Srinath YG
 RegisterNumber:212224230274
 
 ```verilog
-module halfadd_top(a, b, sum, carry);
+module EXPERIMENT3(a, b, sum, carry,D,Bo);
 
 input a, b;
-output sum, carry;
+output sum, carry,D,Bo;
 
 assign sum = a ^ b;
 assign carry = a & b;
-
-endmodule
-
-module halfsub_top(a, b, D, Bo);
-
-input a, b;
-output D, Bo; // Outputs difference D and Borrow Bo for half subtractor
-
 assign D = a ^ b;
 assign Bo = ~a & b;
-
 endmodule
+
 ```
 
 
 **RTL Schematic**
 
-![436899604-e7d8dbd6-a3ee-4562-aef0-8abca9268c91](https://github.com/user-attachments/assets/2bc5dcb0-f4ad-4700-be1a-937c08bbd1ef)
+![image](https://github.com/user-attachments/assets/474d5bf7-0911-41fb-9271-ee63fb1a17a7)
+
 
 **Output/TIMING Waveform**
-![436901334-2ce2ba15-cfa1-42f2-a601-b886456dd287](https://github.com/user-attachments/assets/d1fde98a-cb9e-4381-94c0-c1f88e421cab)
+![image](https://github.com/user-attachments/assets/d1df0598-86ee-4e66-a09b-d1eaaadc8263)
 
-**Half-adder**
-![436901626-6a317f91-4e3c-4e4f-93a0-85b8c53c1c52](https://github.com/user-attachments/assets/f37664b6-933e-4f37-892a-e2e1d4b6d419)
+
 
 **Result:**
 the output of HALF_ADDER_SUBTRACTOR has been executed successfully
